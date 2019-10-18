@@ -1,0 +1,9 @@
+node_modules*
+dist*
+*.log
+logs
+coverage
+!.gitkeep
+.env
+*.iml
+.vscode/

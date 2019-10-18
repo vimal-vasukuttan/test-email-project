@@ -1,0 +1,32 @@
+{
+  "name": "test-email-project",
+  "version": "1.0.0",
+  "description": "A sample test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vimal-vasukuttan/test-email-project.git"
+  },
+  "author": "vimal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vimal-vasukuttan/test-email-project/issues"
+  },
+  "homepage": "https://github.com/vimal-vasukuttan/test-email-project#readme",
+  "dependencies": {
+    "koa": "^2.10.0",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.51",
+    "@types/koa-router": "^7.0.42",
+    "nodemon": "1.19.1",
+    "ts-node": "^8.4.1",
+    "typescript": "3.6.2"
+  }
+}

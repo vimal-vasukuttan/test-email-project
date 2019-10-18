@@ -1,0 +1,9 @@
+{
+  "extends": "@redteclab/tslint-config-rtl",
+  "linterOptions": {
+    "exclude": ["**/*.json"]
+  },
+  "rules": {
+    "no-implicit-dependencies": [true, "dev"]
+  }
+}
