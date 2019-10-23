@@ -1,9 +1,112 @@
 {
-  "extends": "@redteclab/tslint-config-rtl",
-  "linterOptions": {
-    "exclude": ["**/*.json"]
-  },
+  "extends": ["tslint-microsoft-contrib", "tslint-config-prettier"],
   "rules": {
-    "no-implicit-dependencies": [true, "dev"]
+    "arrow-return-shorthand": true,
+    "ban": [
+      true,
+      { "name": "parseInt", "message": "tsstyle#type-coercion" },
+      { "name": "parseFloat", "message": "tsstyle#type-coercion" },
+      { "name": "Array", "message": "tsstyle#array-constructor" }
+    ],
+    "ban-comma-operator": true,
+    "ban-types": [
+      true,
+      ["Object", "Use {} instead."],
+      ["String", "Use 'string' instead."],
+      ["Number", "Use 'number' instead."],
+      ["Boolean", "Use 'boolean' instead."],
+      ["Function", "Use '(parameter: <P>, ...) => <T>' instead."]
+    ],
+    "comment-format": [
+      true,
+      "check-lowercase",
+      {
+        "ignore-words": ["TODO"]
+      }
+    ],
+    "completed-docs": [true, "classes", "functions", "interfaces", "methods"],
+    "deprecation": true,
+    "export-name": false,
+    "import-name": false,
+    "increment-decrement": true,
+    "interface-name": [true, "never-prefix"],
+    "max-classes-per-file": [true, 1],
+    "max-file-line-count": [true, 350],
+    "mocha-no-side-effect-code": false,
+    "newline-per-chained-call": false,
+    "no-angle-bracket-type-assertion": true,
+    "no-backbone-get-set-outside-model": false,
+    "no-console": true,
+    "no-duplicate-case": false,
+    "no-function-constructor-with-string-args": false,
+    "no-implicit-dependencies": [true, "dev"],
+    "no-import-side-effect": [
+      true,
+      {
+        "ignore-module": "reflect\\-metadata"
+      }
+    ],
+    "no-increment-decrement": false,
+    "no-inferred-empty-object-type": true,
+    "no-magic-numbers": true,
+    "no-namespace": [true, "allow-declarations"],
+    "no-null-keyword": true,
+    "no-relative-imports": false,
+    "no-reserved-keywords": false,
+    "no-stateless-class": false,
+    "no-submodule-imports": [true, "controller", "helper", "model", "src"],
+    "no-switch-case-fall-through": true,
+    "no-unbound-method": [true, "ignore-static"],
+    "no-use-before-declare": false,
+    "no-unnecessary-bind": false,
+    "no-unsafe-any": false,
+    "no-var-self": false,
+    "non-literal-fs-path": false,
+    "object-literal-shorthand": true,
+    "object-literal-sort-keys": true,
+    "only-arrow-functions": true,
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "groups": [
+          { "name": "current directory", "match": "^\\.", "order": 40 },
+          { "name": "parent directories", "match": "^\\.\\.", "order": 30 },
+          { "name": "redteclab-internal", "match": "^@redteclab", "order": 20 },
+          { "name": "reflect", "match": "reflect-metadata", "order": 1 },
+          { "name": "libraries", "match": ".*", "order": 10 }
+        ],
+        "import-source-order": "lowercase-last",
+        "named-imports-order": "case-insensitive"
+      }
+    ],
+    "prefer-switch": [
+      true,
+      {
+        "min-cases": 2
+      }
+    ],
+    "prefer-type-cast": false,
+    "strict-boolean-expressions": false,
+    "typedef": [
+      true,
+      "array-destructuring",
+      "arrow-call-signature",
+      "arrow-parameter",
+      "call-signature",
+      "member-variable-declaration",
+      "object-destructuring",
+      "parameter",
+      "property-declaration",
+      "variable-declaration"
+    ],
+    "unnecessary-bind": true,
+    "valid-typeof": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ]
   }
 }

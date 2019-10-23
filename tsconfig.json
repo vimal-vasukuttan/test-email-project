@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@testEmail/*": ["src/*"]
+      "@email/*": ["src/*"]
     },
     "pretty": false,
     "target": "es2020",
