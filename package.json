@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/main.ts"
+    "build-webpack": "webpack",
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/main.ts",
+    "run-server": "node dist/Main.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,9 @@
     "axios": "^0.19.0",
     "koa": "^2.10.0",
     "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   },
   "devDependencies": {
     "@types/koa": "^2.0.51",
@@ -34,6 +38,8 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-microsoft-contrib": "^6.1.1",
-    "typescript": "3.6.2"
+    "typescript": "3.6.2",
+    "dts-bundle": "^0.7.3",
+    "ts-loader": "^6.0.4"
   }
 }
